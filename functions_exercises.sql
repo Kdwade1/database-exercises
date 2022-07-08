@@ -31,3 +31,4 @@ SELECT DATEDIFF(curdate(),hire_date),first_name,last_name,hire_date FROM employe
 Select datediff(curdate(),hire_date)FROM employees;
 
 
+
