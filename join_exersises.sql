@@ -22,7 +22,7 @@ from salaries;
 #          JOIN employees AS e on Department_Manager.emp_no = e.emp_no;
 
 # Number 2
-SELECT dept_name AS Department_Name, CONCAT(first_name, ' ', last_name) AS Department_Manager, gender
+SELECT dept_name AS Department_Name, CONCAT(first_name,' ', last_name) AS Department_Manager, gender
 FROM departments
          INNER JOIN dept_manager AS Department_Manager ON departments.dept_no = Department_Manager.dept_no
          JOIN employees AS e on Department_Manager.emp_no = e.emp_no
@@ -38,9 +38,9 @@ group by title;
 SELECT dept_name AS Department_Name, CONCAT(e.first_name, ' ', e.last_name) AS Department_Manager, salary
 FROM departments
          JOIN dept_manager AS de on departments.dept_no = de.dept_no
-         JOIN employees AS e on de.emp_no = e.emp_no = e.emp_no
+         JOIN employees AS e on de.emp_no = e.emp_no
          JOIN salaries s on e.emp_no = s.emp_no
-where YEAR (de.to_date ='9999')
+where YEAR (de.to_date =9999)
 
 ;
 
